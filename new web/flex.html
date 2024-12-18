@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Flex Page</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #ff6ec4, #7873f5);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Flexbox Section */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #2575fc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .flex-item {
+            flex: 1 1 calc(33.33% - 20px);
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+        }
+        .flex-item img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .flex-item h3 {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .flex-item p {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify;
+        }
+        .flex-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Modal (Image Popup) */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            overflow: auto;
+            padding-top: 60px;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* Back Button */
+    .back-btn {
+    font-size: 1rem;
+    color: #2575fc;
+    text-align: center;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-left: 50px;
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.3s, transform 0.3s;
+    }
+
+    .back-btn:hover {
+    color: #e034ad; /* Change the color on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    }
+
+    .social-icons a {
+            color: #fff;
+            font-size: 2em;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+        }
+
+        .social-icons a:hover {
+            color: #e6358d;
+            transform: scale(1.2);
+        }
+
+        a {
+            color: #6832e7;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            margin-top: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="web.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="flex.html">Flex</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Flex</h1>
+        <p> 
+            Life is a journey filled with both challenges and triumphs, and along the way, we often discover that the most valuable things aren't 
+            material, but the relationships and experiences that shape us. Every step, no matter how small, contributes to our growth, and every person
+             who enters our lives leaves an impact, whether it's through love, guidance, or even the lessons learned from adversity. It's important to 
+             take a moment to reflect on those who have supported us and to be grateful for the opportunities we've been given. True 
+            fulfillment comes not from what we accumulate, but from the connections we nurture and the legacy we create through our actions and choices.</p>
+    </section>
+
+    <!-- Flexbox Content -->
+    <div class="content">
+        <h2 class="section-title">Flexbox Showcase</h2>
+        <div class="flex-container">
+            <div class="flex-item" onclick="openModal('family')">
+                <img src="c:\Users\Ian Carlo\Documents\new web\fam1.jpg" alt="Family" width="500px" height="500px">
+                <h3>Family</h3>
+                <p>My family is a close-knit group of five, where each member plays a vital role in creating a supportive and loving environment.
+                    Although we have faced the heartache of losing my dad, his memory continues to inspire and guide us every day. 
+                    Despite the absence, our bond has grown stronger as we support each other through life's challenges. 
+                    The values he instilled in us remain a cornerstone of our family dynamic, reminding us to cherish one another and find strength in unity.
+                    Our family continues to adapt, holding on to the love and lessons he left behind, while creating new memories together.</p>
+            </div>
+            <div class="flex-item" onclick="openModal('shs')">
+                <img src="c:\Users\Ian Carlo\Documents\new web\SHS.jpg" alt="SHS Friends" width="200px" height="200px">
+                <h3>Senior High School Friends</h3>
+                <p>My senior high school friends are a group of 10 people, each with their own unique qualities and strengths. 
+                    Throughout our time together, we shared countless memories, from studying late for exams to enjoying moments of laughter and camaraderie.
+                     Despite the different paths we've all taken since graduation, the bond we formed remains strong, and we continue to support one another.
+                      These friendships have played an important role in shaping who I am today,
+                     offering both a sense of belonging and a reminder of the importance of friendship and shared experiences in life's journey.</p>
+            </div>
+            <div class="flex-item" onclick="openModal('church')">
+                <img src="c:\Users\Ian Carlo\Documents\new web\CF.jpg" alt="Church Friends" width="200px" height="200px">
+                <h3>Church Friends</h3>
+                <p>Church friends are a special group in my life, bonded not only by shared faith but also by mutual support, kindness, and a sense of community.
+                    These friendships go beyond casual interactions, as they are rooted in a shared commitment to spiritual growth and serving others. 
+                    Together, we worship, pray, and encourage one another through life's challenges. Whether we're volunteering for church events, attending
+                     study groups, or simply sharing moments of fellowship, these friends bring a sense of peace and purpose to my life. The connections we
+                    build in church are a reminder that faith and friendship can go hand in hand, offering strength and unity in both joyous and difficult 
+                    times</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="familyModal" class="modal">
+        <span class="close" onclick="closeModal('family')">&times;</span>
+        <img class="modal-content" id="familyImg" src="">
+        <a href="flex.html" class="back-btn">Back</a>
+    </div>
+    <div id="shsModal" class="modal">
+        <span class="close" onclick="closeModal('shs')">&times;</span>
+        <img class="modal-content" id="shsImg" src="">
+        <a href="flex.html" class="back-btn">Back</a>
+    </div>
+    <div id="churchModal" class="modal">
+        <span class="close" onclick="closeModal('church')">&times;</span>
+        <img class="modal-content" id="churchImg" src="">
+        <a href="flex.html" class="back-btn">Back</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Personal Portfolio  | ALl rights reserved</p>
+        <div class="social-icons">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/cornelius.quimbo" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@koolkid.navi" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <!-- Gmail -->
+            <a href="mailto:ivanquimb01@gmail.com" aria-label="Gmail">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/lookingforcliff/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(type) {
+            var modal = document.getElementById(type + "Modal");
+            var img = document.getElementById(type + "Img");
+            if (type === "family") {
+                img.src = "c:\\Users\\Ian Carlo\\Documents\\new web\\fam1.jpg"; // Path for Family
+            } else if (type === "shs") {
+                img.src = "c:\\Users\\Ian Carlo\\Documents\\new web\\SHS.jpg"; // Path for SHS Friends
+            } else if (type === "church") {
+                img.src = "c:\\Users\\Ian Carlo\\Documents\\new web\\CF.jpg"; // Path for Church Friends
+            }
+            modal.style.display = "block";
+        }
+
+        function closeModal(type) {
+            var modal = document.getElementById(type + "Modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>

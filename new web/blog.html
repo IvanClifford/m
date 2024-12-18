@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Blog</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #ff6ec4, #7873f5);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Blog Content */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #2575fc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .blog-post {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #e1e1e1;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
+        }
+        .blog-post img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .blog-post-content {
+            flex: 1;
+        }
+        .blog-post h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .blog-post p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        .blog-post a {
+            display: inline-block;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #2575fc;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .blog-post a:hover {
+            background-color: #1d63c2;
+            transform: scale(1.05);
+        }
+                  /* Social Media Icons Style */
+                  .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            margin-left: 550px;
+
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2em;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+        }
+
+        .social-icons a:hover {
+            color: #e6358d;
+            transform: scale(1.2);
+        }
+
+        a {
+            color: #6832e7;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="web.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="flex.html">Flex</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Blog</h1>
+        <p>Sharing thoughts, stories, and experiences is a powerful way to connect with others 
+            and foster understanding. It allows us to reflect on our personal journeys, to communicate
+             the lessons we've learned, and to offer wisdom gained through both triumph and adversity. 
+             Through storytelling, we not only preserve memories but also create spaces where empathy
+              and compassion can thrive. Each experience shared opens the door to new perspectives, 
+              helping us see the world through different lenses and reminding us that we are not alone 
+              in our struggles or joys. The act of sharing is a bridge between individuals, a testament
+               to the strength of human connection, and a reminder that our voices, when shared, can impact others in profound ways.</p>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="content">
+        <h2 class="section-title">Recent Activities</h2>
+
+        <div class="blog-post">
+            <img src="c:\Users\Ian Carlo\Documents\new web\INTRO TO COMPUTING-1.jpg" alt="Blog Post 1">
+            <div class="blog-post-content">
+                <h2>Tech-Timeline</h2>
+                <p>The evolution of technology, spanning from the zeroth generation to the present, 
+                    highlights humanity's ingenuity and adaptability. The zeroth generation, defined 
+                    by mechanical computing devices like Charles Babbage's Analytical Engine, laid the 
+                    groundwork for programmable logic. The first generation introduced vacuum tube technology, 
+                    powering early computers like ENIAC, while the second generation replaced these tubes with 
+                    transistors, making devices smaller, faster, and more reliable. The third generation marked
+                     the rise of integrated circuits, revolutionizing processing power and enabling the development 
+                     of smaller personal computers. The fourth generation brought microprocessors, ushering in an era
+                      of compact and affordable computing for everyday users. Today, in the fifth generation, 
+                      characterized by artificial intelligence, quantum computing, and ubiquitous connectivity, 
+                      technology continues to push boundaries, shaping industries and lifestyles through automation,
+                       cloud computing, and advanced machine learning algorithms. This timeline underscores the 
+                       rapid acceleration of innovation, with each generation building upon the breakthroughs of its predecessors</p>
+                <!-- Link to open file -->
+                <a href="c:\Users\Ian Carlo\Documents\new web\INTRO TO COMPUTING.docx" target="_blank">Open File</a>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <img src="c:\Users\Ian Carlo\Documents\new web\Design.png" alt="Blog Post 2">
+            <div class="blog-post-content">
+                <h2>Basic Web Designing</h2>
+                <p>Creating a basic HTML website involves understanding the fundamental structure of web pages, which is centered around HTML 
+                    (HyperText Markup Language). At its core, an HTML document consists of elements enclosed in tags, such as "html", "head", 
+                    and "body". The "head" section contains metadata like the page title, while the "body" holds the content that is visible to users,
+                    such as text, images, and links. A simple website might begin with a basic layout that includes a header (h1), 
+                    paragraphs ("p"), and images ("img"), styled using inline CSS or external style sheets. While HTML defines the structure,
+                    adding CSS enhances the look and feel of the site, and JavaScript can introduce interactivity.
+                    By understanding and combining these elements, even a beginner can create a functional and visually appealing website.
+                    The key to success lies in mastering the use of tags, attributes, and proper syntax to ensure the website is both accessible and user-friendly.</p>
+                <!-- Link to open file -->
+                <a href="c:\Users\Ian Carlo\Documents\new web\Quimbo Ivan T226.html" target="_blank">Open File</a>
+            </div>
+        </div>
+
+        <div class="blog-post">
+            <img src="c:\Users\Ian Carlo\Documents\new web\doc.png" alt="Blog Post 3">
+            <div class="blog-post-content">
+                <h2>Creating a Personal Website</h2>
+                <p>Creating a personal website is a powerful way to showcase one's identity, passions, and professional journey in a digital 
+                    space. It serves as a reflection of who you are, providing an opportunity to curate and present your skills, experiences,
+                     and interests in a way that feels authentic. Beyond being a digital resume, a personal website allows for creativity and
+                      self-expression, offering a platform to share your thoughts, achievements, and aspirations with a wider audience. 
+                      The process of building a website also encourages growth in technical skills, design, and communication, as it requires
+                       attention to detail and the ability to effectively convey your message. Ultimately, a well-crafted personal 
+                       website becomes not just a tool for self-promotion, but a representation of your personal brand, fostering connections,
+                        opportunities, and a lasting online presence.</p>
+                <!-- Link to open file -->
+                <a href="c:\Users\Ian Carlo\Documents\new web\Web Documentations (1).docx" target="_blank">Open File</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 My Personal Portfolio | All rights reserved</p>
+        <div class="social-icons">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/cornelius.quimbo" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@koolkid.navi" target="_blank" aria-label="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <!-- Gmail -->
+            <a href="mailto:ivanquimb01@gmail.com" aria-label="Gmail">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/lookingforcliff/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

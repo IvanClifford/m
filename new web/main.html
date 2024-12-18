@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Professional Website</title>
+    <style>
+        /* General Styles */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            padding: 15px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffdd57;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to bottom, #ff6ec4, #7873f5);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    
+        /* Section Content */
+        .content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #2575fc;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(30% - 20px);
+            max-width: 30%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card img {
+            width: 80px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(226, 66, 146, 10);
+        }
+          /* Social Media Icons Style */
+          .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            margin-left: 550px;
+
+        }
+
+        .social-icons a {
+            color: #fff;
+            font-size: 2em;
+            text-decoration: none;
+            transition: color 0.3s ease, transform 0.3s ease;
+
+        }
+
+        .social-icons a:hover {
+            color: #e62fbe;
+            transform: scale(1.2);
+        }
+
+        a {
+            color: #1114a7;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #6a11cb, #2575fc);
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 1024px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .section-container {
+                justify-content: center;
+            }
+            .card {
+                flex: 1 1 calc(45% - 20px);
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+            nav ul li a {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="flex.html">Flex</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Get to Know Me!</h1>
+        <p>Welcome to my corner of the web. Capturing moments the code.</p>
+    </section>
+
+    <!-- About Section -->
+    <div id="about" class="content">
+        <h2 class="section-title">Me, Myself, and I</h2>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <img src="c:\Users\Ian Carlo\Documents\new web\profile.jpg" alt="Profile Photo" style="border-radius: 50%;" width= "350px" height="350px">
+        </div>
+        <p>Ivan Quimbo is a dedicated student at Bukidnon State University, 
+            driven by his passion for information technology. With a keen interest 
+            in leveraging technology to solve real-world problems, 
+            Ivan actively explores various IT fields.
+             His commitment to learning and innovation reflects his aspiration to 
+             contribute to the ever-evolving tech industry. Eager to expand his knowledge and skills,
+              Ivan continuously seeks opportunities to grow, collaborate, 
+            and make a meaningful impact in the digital landscape.</p>
+    </div>
+
+    <!-- Hobbies Section -->
+    <div id="hobbies" class="content">
+        <h2 class="section-title">Hobbies</h2>
+        <div class="section-container">
+            <div class="card">
+                <img src="c:\Users\Ian Carlo\Documents\new web\basketball (2).jpg" alt="Hobby">
+                <p> Playing basketball with friends on the weekend is a great way to stay active and have fun. 
+                    It challenges both physical endurance and teamwork, helping me to build stronger connections with others. 
+                    Whether it's a casual game or a competitive match, the sport always brings excitement and enjoyment.</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\Ian Carlo\Documents\new web\mic.jpg" alt="Hobby">
+                <p>Singing in the shower or at karaoke nights allows me to express myself and unwind.
+                     It helps me release stress and lifts my mood, bringing joy to those around me.
+                     Whether I'm alone or with friends, singing has always been a favorite way to connect with my emotions.</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\Ian Carlo\Documents\new web\eat.jpg" alt="Hobby">
+                <p> It’s an exciting journey where each meal offers a chance to explore different cuisines and enjoy the simple pleasure of good food. 
+                    Whether you're enjoying a cozy meal at home or trying out a new restaurant, eating brings both satisfaction 
+                    and a deeper connection to different cultures and experiences.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Talents Section -->
+    <div id="talents" class="content">
+        <h2 class="section-title">Talents</h2>
+        <div class="section-container">
+            <div class="card">
+                <img src="c:\Users\Ian Carlo\Documents\new web\guitar.png" alt="Talent">
+                <p>Playing the guitar allows me to channel my creativity and express my emotions through music.
+                     Whether I'm strumming a melody or learning a new song, it brings me a sense of accomplishment and relaxation.
+                     Over time, my guitar skills have grown, allowing me to connect more deeply with the music and share it with others.</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\Ian Carlo\Documents\new web\motor.png" alt="Talent">
+                <p>Riding a motorcycle gives me a unique sense of freedom and adventure, as I navigate through different terrains with skill and precision.
+                     My experience on the road has honed my ability to stay focused, react quickly, and handle various riding conditions with confidence.
+                     It's not just a hobby, but a skill that brings excitement and a deeper connection to the world around me.</p>
+            </div>
+            <div class="card">
+                <img src="c:\Users\Ian Carlo\Documents\new web\teaching.png" alt="Talent">
+                <p>Teaching others, whether through tutoring or mentoring, brings me a sense of fulfillment and purpose.
+                    I enjoy seeing my students grow and gain confidence in their abilities, knowing that I played a part in their learning journey. 
+                   It's incredibly rewarding to share knowledge and witness the positive impact it has on others.</p>
+            </div>
+        </div>
+    </div>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Personal Portfolio | All rights reserved.</p>
+    <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/cornelius.quimbo" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@koolkid.navi" target="_blank" aria-label="TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <!-- Gmail -->
+        <a href="mailto:ivanquimb01@gmail.com" aria-label="Gmail">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/lookingforcliff/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+</footer>
+
